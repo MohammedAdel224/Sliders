@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
@@ -13,7 +15,7 @@ module.exports = {
         rules: [
         {
             test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
+            use: [MiniCssExtractPlugin.loader, 'css-loader'],
             exclude: path.resolve(__dirname, 'src/css/main.css'), // Exclude main.css from bundling
         },
         ],
@@ -26,9 +28,16 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
         patterns: [
-            { from: 'src/css/main.css', to: 'main.css' }, // Copy main.css to dist/
+            { from: 'src/css/main.css', to: 'main.min.css' }, // Copy main.css to dist/
         ],
         }),
+        new MiniCssExtractPlugin({ filename: 'sliders.min.css' }),
     ],
-    mode: 'development', // Change to 'production' when deploying
+    optimization: {
+        minimizer: [
+          `...`, // Keep existing minimizers (like Terser for JS)
+          new CssMinimizerPlugin(), // Minifies CSS
+        ],
+    },
+    mode: 'production', // Change to 'production' when deploying
 };
