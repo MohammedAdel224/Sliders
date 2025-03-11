@@ -1,4 +1,4 @@
-import { assertHtmlElement } from "../util";
+import { assertHtmlElement } from "./util.js";
 
 class SliderTrack{
     #track;
