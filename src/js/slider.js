@@ -1,4 +1,4 @@
-import { assertHtmlElement, toPixel } from "../util.js"
+import { assertHtmlElement, toPixel } from "./util.js"
 
 class Slider{
     #slider;
