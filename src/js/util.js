@@ -14,3 +14,12 @@ export function assertHtmlElement(object){
         throw new TypeError("Expected an HTML element, but received " + typeof object);
     }
 }
+
+export function assertBetween0And100(number){
+    if (typeof number !== "number" || isNaN(number)) {
+        throw new Error("Invalid input: Value must be a number.");
+    }
+    if (number < 0 || 100 < number) {
+        throw new Error("Invalid input: Number must be between 0 and 100.");
+    }
+}
