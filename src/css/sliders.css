@@ -20,8 +20,10 @@
 .one-side-slider > input[type="range"].slider{
     --thumb-width: 1em;
     --thumb-height: 1em;
-    --slider-thumb-color: rgb(197, 63, 99);
-    --slider-thumb-border-color: rgb(255, 255, 255);
+    --thumb-color: rgb(197, 63, 99);
+    --thumb-border-color: rgb(255, 255, 255);
+    --active-thumb-color: rgb(255, 255, 255);
+    --active-thumb-border-color: rgb(255, 255, 255);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -60,8 +62,8 @@
     -webkit-appearance: none;
     height: var(--thumb-height);
     width: var(--thumb-width);
-    background-color: var(--slider-thumb-color);
-    border-color: var(--slider-thumb-border-color);
+    background-color: var(--thumb-color);
+    border-color: var(--thumb-border-color);
     border-style: solid;
     border-width: 3px;
     cursor: pointer;
@@ -77,8 +79,8 @@
     cursor: pointer;
     margin-top: -1px;
     border-radius: 50%;
-    background-color: var(--slider-thumb-color);
-    border-color: var(--slider-thumb-border-color);
+    background-color: var(--thumb-color);
+    border-color: var(--thumb-border-color);
     border-style: solid;
     border-width: 3px;
     pointer-events: auto;
@@ -89,13 +91,24 @@
     width: var(--thumb-width);
     cursor: pointer;
     border-radius: 50%;
-    background-color: var(--slider-thumb-color);
-    border-color: var(--slider-thumb-border-color);
+    background-color: var(--thumb-color);
+    border-color: var(--thumb-border-color);
     border-style: solid;
     border-width: 3px;
     pointer-events: auto;
 }
 
 .one-side-slider > input[type="range"].slider:active::-webkit-slider-thumb{
-    background-color: #ffffff;
+    background-color: var(--active-thumb-color);
+    border-color: var(--active-thumb-border-color);
+}
+
+.one-side-slider > input[type="range"].slider:active::-moz-range-thumb {
+    background-color: var(--active-thumb-color);
+    border-color: var(--active-thumb-border-color);
+}
+
+.one-side-slider > input[type="range"].slider:active::-ms-thumb {
+    background-color: var(--active-thumb-color);
+    border-color: var(--active-thumb-border-color);
 }
