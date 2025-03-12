@@ -8,7 +8,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const createConfig = (minify) => ({
     entry: './src/js/index.js',
     output: {
-        filename: minify ? 'js/sliders.min.js' : 'js/sliders.js', // Generate both minified & unminified JS
+        filename: minify ? 'js/sliders.bundle.min.js' : 'js/sliders.bundle.js', // Generate both minified & unminified JS
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
