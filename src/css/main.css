@@ -92,3 +92,32 @@ hr{
     --thumb-height: 2rem;
     --track-height: 2rem;
 }
+
+span.color{
+    display: inline-block;
+    margin: 0 0 -0.2em 0;
+    padding: 0;
+    height: 1em;
+    width: 1em;
+    border: 1px solid gray
+}
+
+.salmon-pink{
+    background-color: rgb(197, 63, 99);
+}
+
+.gray{
+    background-color: rgb(136, 136, 136);
+}
+
+.white{
+    background-color: white;
+}
+
+.neon-green{
+    background-color: rgb(25, 227, 82);
+}
+
+.pastel-green{
+    background-color: rgb(160, 255, 169);
+}
