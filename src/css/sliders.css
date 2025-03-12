@@ -1,12 +1,17 @@
 .one-side-slider{
+    --slider-pointer-events: none;
     --track-fill-color: rgb(197, 63, 99);
     --track-nofill-color: rgb(136, 136, 136);
     --track-height: 5px;
+    --track-border-radius: 5px;
     --thumb-width: 1em;
     --thumb-height: 1em;
     --thumb-color: rgb(197, 63, 99);
     --thumb-border-color: rgb(255, 255, 255);
+    --thumb-border-style: solid;
     --thumb-border-width: 3px;
+    --thumb-cursor: pointer;
+    --thumb-pointer-events: auto;
     --active-thumb-color: rgb(255, 255, 255);
     --active-thumb-border-color: rgb(255, 255, 255);
     box-sizing: border-box;
@@ -24,8 +29,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    bottom: 0;
-    border-radius: 5px;
+    border-radius: var(--track-border-radius);
 }
 
 .one-side-slider > input[type="range"].slider{
@@ -37,7 +41,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    pointer-events: none;
+    pointer-events: var(--slider-pointer-events);
 }
 
 .one-side-slider > input[type="range"].slider::-webkit-slider-runnable-track{
@@ -59,12 +63,12 @@
     width: var(--thumb-width);
     background-color: var(--thumb-color);
     border-color: var(--thumb-border-color);
-    border-style: solid;
+    border-style: var(--thumb-border-style);
     border-width: var(--thumb-border-width);
     border-radius: 50%;
-    cursor: pointer;
+    cursor: var(--thumb-cursor);
     transform: translateY(calc((var(--track-height) - var(--thumb-height)) / 2));
-    pointer-events: auto;
+    pointer-events: var(--thumb-pointer-events);
 }
 .one-side-slider > input[type="range"].slider::-moz-range-thumb{
     -webkit-appearance: none;
@@ -73,12 +77,12 @@
     width: calc(var(--thumb-width) * 0.7);
     background-color: var(--thumb-color);
     border-color: var(--thumb-border-color);
-    border-style: solid;
+    border-style: var(--thumb-border-style);
     border-width: var(--thumb-border-width);
     border-radius: 50%;
-    cursor: pointer;
+    cursor: var(--thumb-cursor);
     margin-top: -1px;
-    pointer-events: auto;
+    pointer-events: var(--thumb-pointer-events);
 }
 .one-side-slider > input[type="range"].slider::-ms-thumb{
     appearance: none;
@@ -86,11 +90,11 @@
     width: var(--thumb-width);
     background-color: var(--thumb-color);
     border-color: var(--thumb-border-color);
-    border-style: solid;
+    border-style: var(--thumb-border-style);
     border-width: var(--thumb-border-width);
     border-radius: 50%;
-    cursor: pointer;
-    pointer-events: auto;
+    cursor: var(--thumb-cursor);
+    pointer-events: var(--thumb-pointer-events);
 }
 
 .one-side-slider > input[type="range"].slider:active::-webkit-slider-thumb{
