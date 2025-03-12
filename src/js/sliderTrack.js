@@ -12,8 +12,8 @@ class SliderTrack{
         assertHtmlElement(element);
         this.#track = element;
         const style = getComputedStyle(this.#track);
-        this.#fillColor = style.getPropertyValue('--fill-color');
-        this.#nofillColor = style.getPropertyValue('--nofill-color');
+        this.#fillColor = style.getPropertyValue('--track-fill-color');
+        this.#nofillColor = style.getPropertyValue('--track-nofill-color');
     }
 
     toElement(){

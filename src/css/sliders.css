@@ -1,4 +1,13 @@
 .one-side-slider{
+    --track-fill-color: rgb(197, 63, 99);
+    --track-nofill-color: rgb(136, 136, 136);
+    --track-height: 5px;
+    --thumb-width: 1em;
+    --thumb-height: 1em;
+    --thumb-color: rgb(197, 63, 99);
+    --thumb-border-color: rgb(255, 255, 255);
+    --active-thumb-color: rgb(255, 255, 255);
+    --active-thumb-border-color: rgb(255, 255, 255);
     position: relative;
     height: 50px;
     width: 80%;
@@ -6,10 +15,8 @@
 }
 
 .one-side-slider > .track{
-    --fill-color: rgb(197, 63, 99);
-    --nofill-color: rgb(136, 136, 136);
     width: 99%;
-    height: 5px;
+    height: var(--track-height);
     position: absolute;
     margin: auto;
     top: 0;
@@ -18,12 +25,6 @@
 }
 
 .one-side-slider > input[type="range"].slider{
-    --thumb-width: 1em;
-    --thumb-height: 1em;
-    --thumb-color: rgb(197, 63, 99);
-    --thumb-border-color: rgb(255, 255, 255);
-    --active-thumb-color: rgb(255, 255, 255);
-    --active-thumb-border-color: rgb(255, 255, 255);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -31,18 +32,10 @@
     outline: none;
     position: absolute;
     margin: auto;
-    top: 8px;
+    top: 0px;
     bottom: 0;
     background-color: transparent;
     pointer-events: none;
-}
-
-/* Firefox-specific styles */
-@-moz-document url-prefix() {
-    .one-side-slider > input[type="range"].slider{
-        margin-top: -6px;
-        top: 7px;
-    }
 }
 
 .one-side-slider > input[type="range"].slider::-webkit-slider-runnable-track{
@@ -67,7 +60,7 @@
     border-style: solid;
     border-width: 3px;
     cursor: pointer;
-    margin-top: -9px;
+    margin-top: calc((var(--track-height) - var(--thumb-height)) / 2);
     pointer-events: auto;
     border-radius: 50%;
 }
