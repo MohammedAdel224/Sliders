@@ -49,10 +49,9 @@ h2{
     margin-bottom: 10px;
     font-size: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
-.file{
+.highlight{
     border-radius: 5px;
     padding: 3px;
     font-style: italic;
@@ -68,4 +67,28 @@ code{
     width: 100%;
     border-radius: 5px;
     background-color: rgba(1, 93, 14, 0.3);
+}
+
+p{
+    margin-top: 10px;
+}
+
+hr{
+    margin-block: 20px;
+}
+.one-side-slider#green-slider{
+    --track-fill-color: rgb(25, 227, 82);
+    --track-nofill-color: rgb(160, 255, 169);
+    --thumb-color: rgb(255, 255, 255);
+    --thumb-border-color: rgb(25, 227, 82);
+    --active-thumb-color: rgb(25, 227, 82);
+    --active-thumb-border-color: rgb(255, 255, 255);
+}
+
+.one-side-slider#big-thumb{
+    --thumb-border-color: rgb(197, 63, 99);
+    --track-border-radius: 1rem;
+    --thumb-width: 2rem;
+    --thumb-height: 2rem;
+    --track-height: 2rem;
 }

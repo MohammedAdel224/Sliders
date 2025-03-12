@@ -16,8 +16,8 @@
             <div class="step">
                 <h3>Step 1: Download Sliders Files</h3>
                 <ul>
-                    <li>Download the CSS file ( <span class="file">sliders.css</span> or <span class="file">sliders.min.css</span> )</li>
-                    <li>Download the JavaScript file ( <span class="file">sliders.bundle.js</span> or <span class="file">sliders.bundle.min.js</span> )</li>
+                    <li>Download the CSS file ( <span class="highlight">sliders.css</span> or <span class="highlight">sliders.min.css</span> ).</li>
+                    <li>Download the JavaScript file ( <span class="highlight">sliders.bundle.js</span> or <span class="highlight">sliders.bundle.min.js</span> ).</li>
                 </ul>
             </div>
             <div class="step">
@@ -38,12 +38,43 @@
 
         <div class="box">
             <h2>One Side Slider</h2>
+
+            <h3>Create a Slider:</h3>
             <div class="one-side-slider">
                 <div class="track"></div>
                 <input type="range" class="slider"/>
             </div>
-        </div>
 
+            <p>Use classes <span class="highlight">one-side-slider</span>, <span class="highlight">track</span> and <span class="highlight">slider</span> to apply sliders style.</p>
+            <p>HTML</p>
+            <code>
+                <pre>&lt;div class="one-side-slider" id="my-slider"&gt;<br>    &lt;div class="track"&gt;&lt;/div&gt;<br>    &lt;input type="range" class="slider"/&gt;<br>&lt;/div&gt;</pre>
+            </code>
+
+            <hr>
+
+            <h3>Customize Colors</h3>
+            <div class="one-side-slider" id="green-slider">
+                <div class="track"></div>
+                <input type="range" class="slider"/>
+            </div>
+            <p>CSS</p>
+            <code>
+                <pre>.one-side-slider#my-slider{<br>    --track-fill-color: rgb(25, 227, 82);<br>    --track-nofill-color: rgb(160, 255, 169);<br>    --thumb-color: rgb(255, 255, 255);<br>    --thumb-border-color: rgb(25, 227, 82);<br>    --active-thumb-color: rgb(25, 227, 82);<br>    --active-thumb-border-color: rgb(255, 255, 255);<br>}</pre>
+            </code>
+
+            <hr>
+
+            <h3>Customize Shape</h3>
+            <div class="one-side-slider" id="big-thumb">
+                <div class="track"></div>
+                <input type="range" class="slider"/>
+            </div>
+            <p>CSS</p>
+            <code>
+                <pre>.one-side-slider#my-slider{<br>    --thumb-border-color: rgb(197, 63, 99);<br>    --track-border-radius: 1rem;<br>    --thumb-width: 2rem;<br>    --thumb-height: 2rem;<br>    --track-height: 2rem;<br>}</pre>
+            </code>
+        </div>
     </div>
     <script src="js/sliders.bundle.min.js"></script>
 </body>
