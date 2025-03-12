@@ -1,4 +1,5 @@
 .one-side-slider{
+    --fill-percent: 50%;
     --slider-pointer-events: none;
     --track-fill-color: rgb(197, 63, 99);
     --track-nofill-color: rgb(136, 136, 136);
@@ -24,12 +25,13 @@
 }
 
 .one-side-slider > .track{
-    width: 99%;
+    width: 100%;
     height: var(--track-height);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     border-radius: var(--track-border-radius);
+    background: linear-gradient(to right, var(--track-fill-color) var(--fill-percent), var(--track-nofill-color) var(--fill-percent), var(--track-nofill-color));
 }
 
 .one-side-slider > input[type="range"].slider{

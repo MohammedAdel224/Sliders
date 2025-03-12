@@ -2,8 +2,6 @@ import { assertHtmlElement } from "./util.js";
 
 class SliderTrack{
     #track;
-    #fillColor;
-    #nofillColor;
 
     constructor(element){
         if(new.target === SliderTrack){
@@ -11,21 +9,10 @@ class SliderTrack{
         }
         assertHtmlElement(element);
         this.#track = element;
-        const style = getComputedStyle(this.#track);
-        this.#fillColor = style.getPropertyValue('--track-fill-color');
-        this.#nofillColor = style.getPropertyValue('--track-nofill-color');
     }
 
     toElement(){
         return this.#track;
-    }
-
-    get fillColor(){
-        return this.#fillColor;
-    }
-
-    get nofillColor(){
-        return this.#nofillColor
     }
 
     fill(){
