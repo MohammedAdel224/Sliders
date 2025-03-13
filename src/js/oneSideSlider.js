@@ -21,8 +21,12 @@ class OneSideSlider{
     }
 
     #fillTrack(){
-        const percent = (this.#slider.value - this.#slider.min) / (this.#slider.max - this.#slider.min) * 100;
-        this.#track.fill(percent);
+        const trackLength = this.#track.width;
+        const thumbTrackLength = this.#track.width - this.#slider.thumbWidth;
+        const percent = (this.#slider.value - this.#slider.min) / (this.#slider.max - this.#slider.min);
+        const offset = (trackLength - thumbTrackLength) / (2 * trackLength); 
+        const adjustedPercent = thumbTrackLength / trackLength * percent + offset;
+        this.#track.fill(adjustedPercent * 100);
     }
 }
 
