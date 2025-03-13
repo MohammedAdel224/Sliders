@@ -1,13 +1,17 @@
-import { assertHtmlElement, toPixel } from "./util.js"
+import Thumb from "./thumb.js";
+import { assertHtmlElement } from "./util.js"
 
 class Slider{
     #slider;
+    #thumb;
 
     constructor(element){
         assertHtmlElement(element);
         this.#slider = element;
+        this.#thumb = new Thumb(this);
     }
 
+    #updateCSS
     toElement(){
         return this.#slider;
     }
@@ -39,9 +43,7 @@ class Slider{
     }
 
     get thumbWidth(){
-        const style = getComputedStyle(this.#slider);
-        const thumbWidth = style.getPropertyValue('--thumb-width');
-        return parseFloat(toPixel(thumbWidth));
+        return this.#thumb.width;
     }
 }
 
