@@ -11,6 +11,12 @@ class SliderTrack{
         this.#track = element;
     }
 
+    get width(){
+        const style = getComputedStyle(this.#track);
+        const width = style.getPropertyValue('width');
+        return width ? parseFloat(width) : this.#track.clientWidth;
+    }
+    
     toElement(){
         return this.#track;
     }
