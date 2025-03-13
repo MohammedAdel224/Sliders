@@ -35,7 +35,7 @@ class Slider{
     get width(){
         const style = getComputedStyle(this.#slider);
         const width = style.getPropertyValue('width');
-        return parseFloat(toPixel(width));
+        return width ? parseFloat(width) : this.#slider.clientWidth;
     }
 
     get thumbWidth(){
