@@ -59,6 +59,10 @@ h2{
     background-color: rgba(95, 0, 95, 0.3);
 }
 
+.download-link, .download-link p{
+    margin-block: 10px;
+}
+
 code{
     margin-block: 5px;
     font-size: 1rem;
