@@ -1,22 +1,22 @@
 .one-side-slider{
     --fill-percent: 50%; /*this value will be calculated using JavaScript*/
     --slider-pointer-events: none;
-    --track-fill-color: rgb(197, 63, 99);
-    --track-nofill-color: rgb(136, 136, 136);
+    --track-fill-color: #630155;
+    --track-nofill-color: #ffffff;
     --track-height: 5px;
     --track-border-radius: 5px;
     --thumb-width: 1em;
     --thumb-height: 1em;
     --thumb-height-unit: 1em; /*this value will be calculated using JavaScript*/
     --thumb-width-unit: 1em; /*this value will be calculated using JavaScript*/
-    --thumb-color: rgb(197, 63, 99);
-    --thumb-border-color: rgb(255, 255, 255);
+    --thumb-color: #630155;
+    --thumb-border-color: #ffffff;
     --thumb-border-style: solid;
     --thumb-border-width: 3px;
     --thumb-cursor: pointer;
     --thumb-pointer-events: auto;
-    --active-thumb-color: rgb(255, 255, 255);
-    --active-thumb-border-color: rgb(255, 255, 255);
+    --active-thumb-color: #ffffff;
+    --active-thumb-border-color: #ffffff;
     box-sizing: border-box;
     position: relative;
     height: 50px;
