@@ -11,79 +11,11 @@
     <div class="container">
         <h1 class="box">Sliders</h1>
 
-        <div class="box">
-            <h2>Get Strated With Sliders</h2>
-            <div class="step">
-                <h3>Step 1: Download Sliders Files</h3>
-                <ul>
-                    <li>Download the CSS file ( <span class="highlight">sliders.css</span> or <span class="highlight">sliders.min.css</span> ).</li>
-                    <li>Download the JavaScript file ( <span class="highlight">sliders.bundle.js</span> or <span class="highlight">sliders.bundle.min.js</span> ).</li>
-                </ul>
-            </div>
-            <div class="step">
-                <h3>Step 2: Include Sliders To Your Project</h3>
-                <ul>
-                    <li>
-                        Include CSS: <br>
-                        <code>&lt;link rel="stylesheet" href="file-path/sliders.min.css"&gt;</code>
-                    </li>
-                    <li>
-                        Include JavaScript: <br>
-                        <code>&lt;script src="file-path/sliders.bundle.min.js"&gt;</code>
-                    </li>
-                </ul>
-            </div>
+        <%= getStarted %>
+        <%= oneSideSlider %>
+        <%= defaultStyle %>
 
-        </div>
-
-        <div class="box">
-            <h2>One Side Slider</h2>
-
-            <h3>Create a Slider:</h3>
-            <div class="one-side-slider">
-                <div class="track"></div>
-                <input type="range" class="slider"/>
-            </div>
-
-            <p>Use classes <span class="highlight">one-side-slider</span>, <span class="highlight">track</span> and <span class="highlight">slider</span> to apply sliders style.</p>
-            <p>HTML</p>
-            <code>
-                <pre>&lt;div class="one-side-slider" id="my-slider"&gt;<br>    &lt;div class="track"&gt;&lt;/div&gt;<br>    &lt;input type="range" class="slider"/&gt;<br>&lt;/div&gt;</pre>
-            </code>
-
-            <hr>
-
-            <h3>Customize Colors</h3>
-            <div class="one-side-slider" id="green-slider">
-                <div class="track"></div>
-                <input type="range" class="slider"/>
-            </div>
-            <p>CSS</p>
-            <code>
-                <pre>.one-side-slider#my-slider{<br>    --track-fill-color: <span class="color neon-green"></span> rgb(25, 227, 82);<br>    --track-nofill-color: <span class="color pastel-green"></span> rgb(160, 255, 169);<br>    --thumb-color: <span class="color white"></span> rgb(255, 255, 255);<br>    --thumb-border-color: <span class="color neon-green"></span> rgb(25, 227, 82);<br>    --active-thumb-color: <span class="color neon-green"></span> rgb(25, 227, 82);<br>    --active-thumb-border-color: <span class="color white"></span> rgb(255, 255, 255);<br>}</pre>
-            </code>
-
-            <hr>
-
-            <h3>Customize Shape</h3>
-            <div class="one-side-slider" id="big-thumb">
-                <div class="track"></div>
-                <input type="range" class="slider"/>
-            </div>
-            <p>CSS</p>
-            <code>
-                <pre>.one-side-slider#my-slider{<br>    --thumb-border-color: <span class="color salmon-pink"></span> rgb(197, 63, 99);<br>    --track-border-radius: 1rem;<br>    --thumb-width: 2rem;<br>    --thumb-height: 2rem;<br>    --track-height: 2rem;<br>}</pre>
-            </code>
-        </div>
-
-        <div class="box">
-            <h2>Default Style</h2>
-            <p>CSS</p>
-            <code>
-                <pre>.one-side-slider{<br>    --fill-percent: 50%; /*this value will be calculated using JavaScript*/<br>    --slider-pointer-events: none;<br>    --track-fill-color: <span class="color salmon-pink"></span> rgb(197, 63, 99);<br>    --track-nofill-color: <span class="color gray"></span> rgb(136, 136, 136);<br>    --track-height: 5px;<br>    --track-border-radius: 5px;<br>    --thumb-width: 1em;<br>    --thumb-height: 1em;<br>    --thumb-height-unit: 1em; /*this value will be calculated using JavaScript*/<br>    --thumb-width-unit: 1em; /*this value will be calculated using JavaScript*/<br>    --thumb-color: <span class="color salmon-pink"></span> rgb(197, 63, 99);<br>    --thumb-border-color: <span class="color white"></span> rgb(255, 255, 255);<br>    --thumb-border-style: solid;<br>    --thumb-border-width: 3px;<br>    --thumb-cursor: pointer;<br>    --thumb-pointer-events: auto;<br>    --active-thumb-color: <span class="color white"></span> rgb(255, 255, 255);<br>    --active-thumb-border-color: <span class="color white"></span> rgb(255, 255, 255);<br>    box-sizing: border-box;<br>    position: relative;<br>    height: 50px;<br>    width: 80%;<br>    margin: auto;<br>    display: flex;<br>    align-items: center;<br>}</pre>
-            </code>
-        </div>
     </div>
-    <script src="js/sliders.bundle.min.js"></script>
+    <script src="./js/sliders.bundle.min.js"></script>
 </body>
 </html>

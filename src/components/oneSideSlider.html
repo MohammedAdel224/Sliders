@@ -1,0 +1,39 @@
+<div class="box">
+    <h2>One Side Slider</h2>
+
+    <h3>Create a Slider:</h3>
+    <div class="one-side-slider">
+        <div class="track"></div>
+        <input type="range" class="slider"/>
+    </div>
+
+    <p>Use classes <span class="highlight">one-side-slider</span>, <span class="highlight">track</span> and <span class="highlight">slider</span> to apply sliders style.</p>
+    <p>HTML</p>
+    <code>
+        <pre>&lt;div class="one-side-slider" id="my-slider"&gt;<br>    &lt;div class="track"&gt;&lt;/div&gt;<br>    &lt;input type="range" class="slider"/&gt;<br>&lt;/div&gt;</pre>
+    </code>
+
+    <hr>
+
+    <h3>Customize Colors</h3>
+    <div class="one-side-slider" id="green-slider">
+        <div class="track"></div>
+        <input type="range" class="slider"/>
+    </div>
+    <p>CSS</p>
+    <code>
+        <pre>.one-side-slider#my-slider{<br>    --track-fill-color: <span class="color neon-green"></span> rgb(25, 227, 82);<br>    --track-nofill-color: <span class="color pastel-green"></span> rgb(160, 255, 169);<br>    --thumb-color: <span class="color white"></span> rgb(255, 255, 255);<br>    --thumb-border-color: <span class="color neon-green"></span> rgb(25, 227, 82);<br>    --active-thumb-color: <span class="color neon-green"></span> rgb(25, 227, 82);<br>    --active-thumb-border-color: <span class="color white"></span> rgb(255, 255, 255);<br>}</pre>
+    </code>
+
+    <hr>
+
+    <h3>Customize Shape</h3>
+    <div class="one-side-slider" id="big-thumb">
+        <div class="track"></div>
+        <input type="range" class="slider"/>
+    </div>
+    <p>CSS</p>
+    <code>
+        <pre>.one-side-slider#my-slider{<br>    --thumb-border-color: <span class="color salmon-pink"></span> rgb(197, 63, 99);<br>    --track-border-radius: 1rem;<br>    --thumb-width: 2rem;<br>    --thumb-height: 2rem;<br>    --track-height: 2rem;<br>}</pre>
+    </code>
+</div>

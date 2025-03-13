@@ -1,9 +1,14 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+const getStarted = fs.readFileSync("./src/components/getStarted.html", "utf8");
+const oneSideSlider = fs.readFileSync("./src/components/oneSideSlider.html", "utf8");
+const defaultStyle = fs.readFileSync("./src/components/defaultStyle.html", "utf8");
 
 const createConfig = (minify) => ({
     entry: './src/js/index.js',
@@ -27,6 +32,12 @@ const createConfig = (minify) => ({
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+            inject: "body",
+            templateParameters: {
+                getStarted: getStarted,
+                oneSideSlider: oneSideSlider,
+                defaultStyle: defaultStyle,
+            },
         }),
         new CopyWebpackPlugin({
             patterns: [
