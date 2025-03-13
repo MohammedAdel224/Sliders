@@ -73,7 +73,7 @@ code{
 code, code *{
     word-wrap: break-word; /* Ensures long words wrap */
     overflow-wrap: break-word; /* Modern equivalent of `word-wrap` */
-    white-space: normal; /* Allows text to wrap */
+    white-space: pre-wrap; /* Allows wrapping but maintains spacing */
 }
 
 p{
