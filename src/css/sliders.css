@@ -1,5 +1,5 @@
 .one-side-slider{
-    --fill-percent: 50%;
+    --fill-percent: 50%; /*this value will be calculated using JavaScript*/
     --slider-pointer-events: none;
     --track-fill-color: rgb(197, 63, 99);
     --track-nofill-color: rgb(136, 136, 136);
@@ -7,6 +7,8 @@
     --track-border-radius: 5px;
     --thumb-width: 1em;
     --thumb-height: 1em;
+    --thumb-height-unit: 1em; /*this value will be calculated using JavaScript*/
+    --thumb-width-unit: 1em; /*this value will be calculated using JavaScript*/
     --thumb-color: rgb(197, 63, 99);
     --thumb-border-color: rgb(255, 255, 255);
     --thumb-border-style: solid;
@@ -38,6 +40,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    height: var(--track-height);
     width: 100%;
     position: absolute;
     top: 50%;
@@ -75,8 +78,8 @@
 .one-side-slider > input[type="range"].slider::-moz-range-thumb{
     -webkit-appearance: none;
     appearance: none;
-    height: calc(var(--thumb-height) * 0.7);
-    width: calc(var(--thumb-width) * 0.7);
+    height: calc(var(--thumb-height) - 0.3 * var(--thumb-height-unit));
+    width: calc(var(--thumb-width) - 0.3 * var(--thumb-width-unit));
     background-color: var(--thumb-color);
     border-color: var(--thumb-border-color);
     border-style: var(--thumb-border-style);
