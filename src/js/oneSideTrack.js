@@ -1,7 +1,7 @@
 import { assertBetween0And100 } from "./util.js";
-import SliderTrack from "./sliderTrack.js";
+import Track from "./track.js";
 
-class OneSideSliderTrack extends SliderTrack{
+class OneSideTrack extends Track{
     fill(percent){
         assertBetween0And100(percent);
         const track = this.toElement();
@@ -9,4 +9,4 @@ class OneSideSliderTrack extends SliderTrack{
     }
 }
 
-export default OneSideSliderTrack;
+export default OneSideTrack;

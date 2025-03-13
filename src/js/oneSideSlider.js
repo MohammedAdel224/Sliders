@@ -1,5 +1,5 @@
 import { assertHtmlElement } from "./util.js";
-import OneSideSliderTrack from "./oneSideSliderTrack.js";
+import OneSideTrack from "./oneSideTrack.js";
 import Slider from "./slider.js";
 
 class OneSideSlider{
@@ -14,7 +14,7 @@ class OneSideSlider{
     }
 
     #init(track, slider){
-        this.#track = new OneSideSliderTrack(track);
+        this.#track = new OneSideTrack(track);
         this.#slider = new Slider(slider);
         this.#slider.addEventListener("input", ()=>{this.#fillTrack();});
         this.#fillTrack();

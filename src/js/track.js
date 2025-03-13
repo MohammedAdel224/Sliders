@@ -1,10 +1,10 @@
 import { assertHtmlElement } from "./util.js";
 
-class SliderTrack{
+class Track{
     #track;
 
     constructor(element){
-        if(new.target === SliderTrack){
+        if(new.target === Track){
             throw new Error("Cannot instantiate an abstract class");
         }
         assertHtmlElement(element);
@@ -26,4 +26,4 @@ class SliderTrack{
     }
 }
 
-export default SliderTrack;
+export default Track;
