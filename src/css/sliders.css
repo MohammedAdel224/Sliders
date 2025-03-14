@@ -7,8 +7,6 @@
     --track-border-radius: 5px;
     --thumb-width: 1em;
     --thumb-height: 1em;
-    --thumb-height-unit: 1em; /*this value will be calculated using JavaScript*/
-    --thumb-width-unit: 1em; /*this value will be calculated using JavaScript*/
     --thumb-color: #630155;
     --thumb-border-color: #ffffff;
     --thumb-border-style: solid;
@@ -17,7 +15,6 @@
     --thumb-pointer-events: auto;
     --active-thumb-color: #ffffff;
     --active-thumb-border-color: #ffffff;
-    box-sizing: border-box;
     position: relative;
     height: 50px;
     width: 80%;
@@ -64,6 +61,7 @@
 
 .one-side-slider > input[type="range"].slider::-webkit-slider-thumb{
     -webkit-appearance: none;
+    box-sizing: content-box;
     height: var(--thumb-height);
     width: var(--thumb-width);
     background-color: var(--thumb-color);
@@ -72,25 +70,26 @@
     border-width: var(--thumb-border-width);
     border-radius: 50%;
     cursor: var(--thumb-cursor);
-    transform: translateY(calc((var(--track-height) - var(--thumb-height)) / 2));
+    transform: translateY(calc((var(--track-height) - var(--thumb-height)) / 2 - var(--thumb-border-width)));
     pointer-events: var(--thumb-pointer-events);
 }
 .one-side-slider > input[type="range"].slider::-moz-range-thumb{
     -webkit-appearance: none;
+    box-sizing: content-box;
     appearance: none;
-    height: calc(var(--thumb-height) - 0.3 * var(--thumb-height-unit));
-    width: calc(var(--thumb-width) - 0.3 * var(--thumb-width-unit));
+    height: var(--thumb-height);
+    width: var(--thumb-width);
     background-color: var(--thumb-color);
     border-color: var(--thumb-border-color);
     border-style: var(--thumb-border-style);
     border-width: var(--thumb-border-width);
     border-radius: 50%;
     cursor: var(--thumb-cursor);
-    margin-top: -1px;
     pointer-events: var(--thumb-pointer-events);
 }
 .one-side-slider > input[type="range"].slider::-ms-thumb{
     appearance: none;
+    box-sizing: content-box;
     height: var(--thumb-height);
     width: var(--thumb-width);
     background-color: var(--thumb-color);
