@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(160deg, #a82b9a, #6927eb, #334142);
+}
+
+.container{
+    max-width: 1000px;
+    margin-inline: auto;
+    min-height: 100vh;
+}
+
+.box{
+    border-radius: 20px;
+    padding: 20px;
+    margin-block: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.step{
+    padding-inline: 20px;
+    margin-block: 50px;
+}
+
+.step h3{
+    font-size: 2em;
+    margin-bottom: 10px; 
+}
+
+.step li{
+    list-style-position: inside;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.highlight{
+    border-radius: 5px;
+    padding: 3px;
+    font-style: italic;
+    background-color: rgba(95, 0, 95, 0.3);
+}
+
+.download-link, .download-link p{
+    margin-block: 10px;
+}
+.download-link a{
+    color: white;
+}
+
+.download-link a:hover{
+    color: black;
+}
+
+code{
+    margin-block: 5px;
+    font-size: 1rem;
+    border: solid black 1px;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(1, 93, 14, 0.3);
+}
+
+code, code *{
+    word-wrap: break-word; /* Ensures long words wrap */
+    overflow-wrap: break-word; /* Modern equivalent of `word-wrap` */
+    white-space: pre-wrap; /* Allows wrapping but maintains spacing */
+}
+
+p{
+    margin-top: 10px;
+}
+
+hr{
+    margin-block: 20px;
+}
+.one-side-slider#green-slider{
+    --track-fill-color: #0013a9;
+    --track-nofill-color: #000000;
+    --thumb-color: #ffffff;
+    --thumb-border-color: #0013a9;
+    --active-thumb-color: #0013a9;
+    --active-thumb-border-color: #ffffff;
+}
+
+.one-side-slider#big-thumb{
+    --track-height: 2rem;
+    --track-border-radius: 1rem;
+    --thumb-width: 2rem;
+    --thumb-height: 2rem;
+    --active-thumb-color: #630155;
+    --thumb-border-width: 0px;
+}
+
+span.color{
+    display: inline-block;
+    margin: 0 0 -0.2em 0;
+    padding: 0;
+    height: 1em;
+    width: 1em;
+    border: 1px solid gray
+}
+
+.purple{
+    background-color: #630155;
+}
+
+.white{
+    background-color: #ffffff;
+}
+
+.blue{
+    background-color: #0013a9;
+}
+
+.black{
+    background-color: #000000;
+}

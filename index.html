@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="sliders.min.css"><link rel="stylesheet" href="main.min.css"><title>Sliders</title><script defer="defer" src="main.min.js"></script><link href="sliders.min.css" rel="stylesheet"></head><body><div class="container"><h1 class="box">Sliders</h1><div class="box"><h2>One Side Slider</h2><div class="one-side-slider"><div class="track"></div><input type="range" class="slider"/></div></div></div><script src="main.min.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="./css/sliders.min.css"><link rel="stylesheet" href="./css/style.min.css"><title>Sliders</title><link href="css/sliders.min.css" rel="stylesheet"></head><body><div class="container"><h1 class="box">Sliders</h1><div class="box"><h2>Get Strated With Sliders</h2><div class="step"><h3>Step 1: Download Sliders Files</h3><ul><li>Download the CSS file ( <span class="highlight">sliders.css</span> or <span class="highlight">sliders.min.css</span> ).</li><li>Download the JavaScript file ( <span class="highlight">sliders.bundle.js</span> or <span class="highlight">sliders.bundle.min.js</span> ).</li></ul><div class="download-link"><p>Download from here:</p><a href="https://github.com/MohammedAdel224/Sliders/tree/gh-pages">https://github.com/MohammedAdel224/Sliders/tree/gh-pages</a></div></div><div class="step"><h3>Step 2: Include Sliders To Your Project</h3><ul><li>Include CSS:<br><code>&lt;link rel="stylesheet" href="file-path/sliders.min.css"&gt;</code></li><li>Include JavaScript:<br><code>&lt;script src="file-path/sliders.bundle.min.js"&gt;</code></li></ul></div></div><div class="box"><h2>One Side Slider</h2><h3>Create a Slider:</h3><div class="one-side-slider"><div class="track"></div><input type="range" class="slider"/></div><p>Use classes <span class="highlight">one-side-slider</span>, <span class="highlight">track</span> and <span class="highlight">slider</span> to apply sliders style.</p><p>HTML</p><code><pre>&lt;div class="one-side-slider" id="my-slider"&gt;
+    &lt;div class="track"&gt;&lt;/div&gt;
+    &lt;input type="range" class="slider"/&gt;
+&lt;/div&gt;</pre></code><hr><h3>Customize Colors</h3><div class="one-side-slider" id="green-slider"><div class="track"></div><input type="range" class="slider"/></div><p>CSS</p><code><pre>.one-side-slider#my-slider{
+    --track-fill-color: <span class="color blue"></span> #0013a9;
+    --track-nofill-color: <span class="color black"></span> #000000;
+    --thumb-color: <span class="color white"></span> #ffffff;
+    --thumb-border-color: <span class="color blue"></span> #0013a9;
+    --active-thumb-color: <span class="color blue"></span> #0013a9;
+    --active-thumb-border-color: <span class="color white"></span> #ffffff;
+}</pre></code><hr><h3>Customize Shape</h3><div class="one-side-slider" id="big-thumb"><div class="track"></div><input type="range" class="slider"/></div><p>CSS</p><code><pre>.one-side-slider#my-slider{
+    --track-height: 2rem;
+    --track-border-radius: 1rem;
+    --thumb-width: 2rem;
+    --thumb-height: 2rem;
+    --active-thumb-color: <span class="color purple"></span> #630155;
+    --thumb-border-width: 0px;
+}</pre></code></div><div class="box"><h2>Default Style</h2><p>CSS</p><code><pre>.one-side-slider{
+    --fill-percent: 50%; /*this value will be calculated using JavaScript*/
+    --slider-pointer-events: none;
+    --track-fill-color: <span class="color purple"></span> #630155;
+    --track-nofill-color: <span class="color white"></span> #ffffff;
+    --track-height: 5px;
+    --track-border-radius: 5px;
+    --thumb-width: 1em;
+    --thumb-height: 1em;
+    --thumb-color: <span class="color purple"></span> #630155;
+    --thumb-border-color: <span class="color white"></span> #ffffff;
+    --thumb-border-style: solid;
+    --thumb-border-width: 3px;
+    --thumb-cursor: pointer;
+    --thumb-pointer-events: auto;
+    --active-thumb-color: <span class="color white"></span> #ffffff;
+    --active-thumb-border-color: <span class="color white"></span> #ffffff;
+    position: relative;
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}</pre></code></div></div><script src="./js/sliders.bundle.min.js"></script><script defer="defer" src="js/sliders.bundle.min.js"></script></body></html>
